@@ -160,7 +160,7 @@ codex
 
 | [![deCloud 接入教程](https://img.youtube.com/vi/Kh9MC5De2vI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Kh9MC5De2vI) |
 |---|
-| <sub>3 分钟 —— 从注册到第一次调用,完整走一遍。</sub> |
+| <sub>3 分钟 —— 从连接钱包到第一次调用,完整走一遍。</sub> |
 
 ---
 
