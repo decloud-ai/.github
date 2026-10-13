@@ -29,7 +29,7 @@
 ### 第一次跑通
 
 1. 到 [macdecloud.com](https://macdecloud.com/?utm_source=gh) 注册,拿一把 `dcld-sk-…` 开头的 Key
-2. **写代码接入时只改两处** —— 地址和 Key(见下一节的代码段)
+2. **自己写代码接入,只改两处** —— 地址和 Key(代码见下一节);用 Claude Code、Codex 或图形客户端,填的字段不一样
 3. 调用一次:返回里带 `content` 就说明通了
 
 ### 按需要复制代码
