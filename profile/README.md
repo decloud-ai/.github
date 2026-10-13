@@ -48,9 +48,11 @@ client = OpenAI(
 
 ### `03` 代码示例
 
+**这一节是六种接法,按需要挑一段就行 —— 它们互相独立,不是让你从头做到尾。**
+
 下面的例子用环境变量装 Key:`DECLOUD_API_KEY`(Claude Code 那段用 `ANTHROPIC_AUTH_TOKEN`)。先设好,再挑你要的那段。Python 与 Node.js 用的是 OpenAI 官方 SDK,只需要填 `base_url` 与 `api_key` 两处。
 
-#### 先用 cURL 跑通
+#### `03.1` 先用 cURL 跑通
 
 ```bash
 export DECLOUD_API_KEY='dcld-sk-...'
@@ -68,6 +70,10 @@ curl https://macdecloud.com/v1/chat/completions \
   ]
 }' 
 ```
+
+---
+
+#### `03.2` Python
 
 <sub>先装依赖(装一次就行):下面的代码用 OpenAI 官方 SDK 发请求,Python 用 pip 装。</sub>
 
@@ -90,6 +96,10 @@ r = client.chat.completions.create(
 print(r.choices[0].message.content)
 ```
 
+---
+
+#### `03.3` Node.js
+
 <sub>先装依赖(装一次就行):下面的代码用 OpenAI 官方 SDK 发请求,Node.js 用 npm 装。</sub>
 
 ```bash
@@ -110,7 +120,9 @@ const r = await client.chat.completions.create({
 console.log(r.choices[0].message.content);
 ```
 
-#### 流式输出(SSE)
+---
+
+#### `03.4` 流式输出(SSE)
 
 请求体里加 `"stream": true`:
 
@@ -130,7 +142,9 @@ curl https://macdecloud.com/v1/chat/completions \
 }' 
 ```
 
-#### Claude Code
+---
+
+#### `03.5` Claude Code
 
 ```bash
 export ANTHROPIC_BASE_URL='https://macdecloud.com'
@@ -141,7 +155,9 @@ claude
 
 <sub>`decloud-coder` 是别名,不是固定模型:先在控制台 API Keys → Model aliases 里建一个,映射到支持工具调用的模型(别用 `opus`/`sonnet`/`haiku` 这类保留短名 —— 部分 CLI 版本会在本地改写它们),或直接把 `ANTHROPIC_MODEL` 写成真实模型 ID;没建就用会返回 404 `model not found or disabled`。这里要用 `ANTHROPIC_AUTH_TOKEN`(按 Bearer 发送),换成 `ANTHROPIC_API_KEY`(客户端会发 `x-api-key`)会 401。</sub>
 
-#### Codex
+---
+
+#### `03.6` Codex
 
 配置写进 `~/.codex/config.toml`:
 
