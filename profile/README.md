@@ -17,28 +17,24 @@
 
 ### `01` 为什么选择 deCloud
 
-> 接入多家模型,通常绕不开这几件事:每接一家就多一把 Key、换个模型就要重测、账单散在几个后台、出错了看不出是哪一层的问题。deCloud 把这些收在中间一层里:
+<sub>接入多家模型,通常绕不开:每接一家多一把 Key、换模型要重测、账单散在几个后台、出错看不出是哪一层。</sub>
 
-- 一个 Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型 —— 不用逐家开户、逐家管 Key
-- 接入只写一次,之后模型换代与你无关 —— 换模型不用改代码
-- 手上在用的客户端(Claude Code、Codex、Cursor、Cherry Studio 这类)能改接口地址就能接
-- 每个模型的上游在模型页逐个标注 —— 来源看得见
-- 上游出错导致的失败不计费;用量逐笔可查,能导出表格
-- 报错有中英文说明,`401` `402` `403` `404` `429` 都配了文档
-
----
+- 一个 Key 覆盖七类模型 —— 不用逐家开户、逐家管 Key
+- 接入只写一次 —— 换模型不用改代码
+- 客户端不用换 —— Claude Code、Codex、Cursor、Cherry Studio 能改地址就能接
+- 上游逐个标注 —— 每个模型的来源在模型页看得见
+- 失败不计费 —— 上游出错导致的失败不扣余额,用量可导出
+- 报错有据可查 —— 每个状态码一页文档,中英文都有
 
 ### `02` 第一次跑通
 
-1. 到 [macdecloud.com](https://macdecloud.com/?utm_source=gh) 注册,拿一把 `dcld-sk-…` 开头的 Key
-2. **自己写代码接入,只改两处** —— 地址和 Key(代码见下一节);用 Claude Code、Codex 或图形客户端,填的字段不一样
-3. 调用一次:返回里带 `content` 就说明通了
-
----
+1. 到 [macdecloud.com](https://macdecloud.com/?utm_source=gh) 注册,拿一把 `dcld-sk-…` Key
+2. 改两处 —— 地址和 Key(代码见 `03`)
+3. 调用一次:返回里带 `content` 就通了
 
 ### `03` 代码示例
 
-> <sub>下面的例子都用环境变量 `DECLOUD_API_KEY` —— 先设好它,再挑你要的那段。<br>Python 与 Node.js 两段用的是 **OpenAI 官方 SDK**,只需要填 `base_url` 与 `api_key` 两处。</sub>
+<sub>下面的例子都用环境变量 `DECLOUD_API_KEY` —— 先设好它,再挑你要的那段。<br>Python 与 Node.js 两段用的是 **OpenAI 官方 SDK**,只需要填 `base_url` 与 `api_key` 两处。</sub>
 
 #### 最快跑通 —— cURL
 
@@ -165,37 +161,17 @@ codex
 ### `06` 遇到问题
 
 - Telegram 客服 [t.me/DeCloud_CS](https://t.me/DeCloud_CS) —— 接入排障、用量答疑
-- 在 [quickstart 提 Issue](https://github.com/decloud-ai/quickstart/issues) —— 报错、建议、文档问题
-
-<div align="center"><sub><a href="https://macdecloud.com/?utm_source=gh">macdecloud.com</a> · <a href="https://macdecloud.com/docs?utm_source=gh">文档</a></sub></div>
-
-[b-web]: https://img.shields.io/badge/Website-245e43?style=for-the-badge&logo=googlechrome&logoColor=white
-[l-web]: https://macdecloud.com/?utm_source=gh
-[b-qs]: https://img.shields.io/badge/Quickstart-245e43?style=for-the-badge&logo=github&logoColor=white
-[l-qs]: https://github.com/decloud-ai/quickstart
-[b-docs]: https://img.shields.io/badge/Docs-245e43?style=for-the-badge&logo=readthedocs&logoColor=white
-[l-docs]: https://macdecloud.com/docs?utm_source=gh
-[b-yt]: https://img.shields.io/badge/YouTube-a13a2c?style=for-the-badge&logo=youtube&logoColor=white
-[l-yt]: https://www.youtube.com/@decloud-AI
-[b-mail]: https://img.shields.io/badge/Email-245e43?style=for-the-badge&logo=gmail&logoColor=white
-[l-mail]: mailto:globaldecloud@gmail.com
-[b-tg]: https://img.shields.io/badge/Support-26A5E4?style=for-the-badge&logo=telegram&logoColor=white
-[l-tg]: https://t.me/DeCloud_CS
-[s-1]: https://img.shields.io/badge/OpenAI-compatible-192b25?style=flat-square
-[s-2]: https://img.shields.io/badge/Anthropic-Messages-192b25?style=flat-square
-[s-3]: https://img.shields.io/badge/OpenAI-Responses-192b25?style=flat-square
-
----
+- [在 quickstart 提 Issue](https://github.com/decloud-ai/quickstart/issues) —— 报错、建议、文档问题
 
 ### `07` 开始使用
 
+<div align="center">
+
 [![Get started][b-go]][l-go] [![All docs][b-index]][l-index] [![Email][b-mail]][l-mail]
 
-注册 → 拿一把 Key → 改两处地址 → 跑通第一次调用。
+<sub>注册 → 拿一把 Key → 改两处地址 → 跑通第一次调用。</sub>
 
-<div align="center"><sub><a href="https://macdecloud.com/?utm_source=gh">macdecloud.com</a> · <a href="https://github.com/decloud-ai/.github/blob/main/DOCS.md">文档总目录</a></sub></div>
+<sub><a href="https://macdecloud.com/?utm_source=gh">macdecloud.com</a> · <a href="https://github.com/decloud-ai/.github/blob/main/DOCS.md">文档总目录</a></sub>
 
-[b-go]: https://img.shields.io/badge/Get%20started-245e43?style=for-the-badge&logo=googlechrome&logoColor=white
-[l-go]: https://macdecloud.com/?utm_source=gh
-[b-index]: https://img.shields.io/badge/All%20docs-192b25?style=for-the-badge&logo=github&logoColor=white
-[l-index]: https://github.com/decloud-ai/.github/blob/main/DOCS.md
+</div>
+
