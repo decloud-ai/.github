@@ -144,9 +144,9 @@ curl https://macdecloud.com/v1/chat/completions \
 
 ---
 
-### `04` 客户端
+### `04` 常见客户端
 
-**两种现成客户端,按需要挑一个就行 —— 都要先在控制台建一个模型别名(见每段下面的说明)。**
+<sub>两个都要先在控制台建模型别名(API Keys → Model aliases),映射到支持工具调用的模型;别用 `opus`/`sonnet`/`haiku` 这类保留短名,或直接把模型字段写成真实模型 ID。</sub>
 
 #### `04.1` Claude Code
 
@@ -157,7 +157,7 @@ export ANTHROPIC_MODEL='decloud-coder'
 claude
 ```
 
-<sub>`decloud-coder` 是别名,不是固定模型:先在控制台 API Keys → Model aliases 里建一个,映射到支持工具调用的模型(别用 `opus`/`sonnet`/`haiku` 这类保留短名 —— 部分 CLI 版本会在本地改写它们),或直接把 `ANTHROPIC_MODEL` 写成真实模型 ID;没建就用会返回 404 `model not found or disabled`。这里要用 `ANTHROPIC_AUTH_TOKEN`(按 Bearer 发送),换成 `ANTHROPIC_API_KEY`(客户端会发 `x-api-key`)会 401。</sub>
+<sub>必须用 `ANTHROPIC_AUTH_TOKEN`(按 Bearer 发送):换成 `ANTHROPIC_API_KEY`(客户端会发 `x-api-key`)会 401。</sub>
 
 ---
 
@@ -183,8 +183,6 @@ wire_api = "responses"
 export DECLOUD_API_KEY='dcld-sk-...'
 codex
 ```
-
-<sub>`decloud-codex` 同样是别名,且只作用于这个 Key:没建就直接用会返回 404。先在控制台 API Keys → Model aliases 里建,或把 `model` 直接写成真实模型 ID。</sub>
 
 更多接法(Cursor · opencode · Cherry Studio · 工具调用 · 模型名怎么写)见 [文档 · 客户端](https://macdecloud.com/docs/clients?utm_source=gh) 与 [quickstart][l-qs]。
 
