@@ -62,14 +62,30 @@ deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、�
 <div align="center"><sub><a href="https://macdecloud.com/?utm_source=gh">macdecloud.com</a> · <a href="https://macdecloud.com/docs?utm_source=gh">文档</a></sub></div>
 
 [b-web]: https://img.shields.io/badge/Website-245e43?style=for-the-badge&logo=googlechrome&logoColor=white
-[b-qs]: https://img.shields.io/badge/Quickstart-245e43?style=for-the-badge&logo=github&logoColor=white
-[b-docs]: https://img.shields.io/badge/Docs-245e43?style=for-the-badge&logo=readthedocs&logoColor=white
-[b-yt]: https://img.shields.io/badge/YouTube-a13a2c?style=for-the-badge&logo=youtube&logoColor=white
-[b-mail]: https://img.shields.io/badge/Email-245e43?style=for-the-badge&logo=gmail&logoColor=white
-[b-tg]: https://img.shields.io/badge/Support-26A5E4?style=for-the-badge&logo=telegram&logoColor=white
 [l-web]: https://macdecloud.com/?utm_source=gh
+[b-qs]: https://img.shields.io/badge/Quickstart-245e43?style=for-the-badge&logo=github&logoColor=white
 [l-qs]: https://github.com/decloud-ai/quickstart
+[b-docs]: https://img.shields.io/badge/Docs-245e43?style=for-the-badge&logo=readthedocs&logoColor=white
 [l-docs]: https://macdecloud.com/docs?utm_source=gh
+[b-yt]: https://img.shields.io/badge/YouTube-a13a2c?style=for-the-badge&logo=youtube&logoColor=white
 [l-yt]: https://www.youtube.com/@decloud-AI
+[b-mail]: https://img.shields.io/badge/Email-245e43?style=for-the-badge&logo=gmail&logoColor=white
 [l-mail]: mailto:globaldecloud@gmail.com
+[b-tg]: https://img.shields.io/badge/Support-26A5E4?style=for-the-badge&logo=telegram&logoColor=white
 [l-tg]: https://t.me/DeCloud_CS
+[s-1]: https://img.shields.io/badge/OpenAI-compatible-192b25?style=flat-square
+[s-2]: https://img.shields.io/badge/Anthropic-Messages-192b25?style=flat-square
+[s-3]: https://img.shields.io/badge/OpenAI-Responses-192b25?style=flat-square
+
+### 开始使用
+
+[![Get started][b-go]][l-go] [![All docs][b-index]][l-index] [![Email][b-mail]][l-mail]
+
+注册 → 拿一把 Key → 改两处地址 → 跑通第一次调用。
+
+<div align="center"><sub><a href="https://macdecloud.com/?utm_source=gh">macdecloud.com</a> · <a href="https://github.com/decloud-ai/.github/blob/main/DOCS.md">文档总目录</a></sub></div>
+
+[b-go]: https://img.shields.io/badge/Get%20started-245e43?style=for-the-badge&logo=googlechrome&logoColor=white
+[l-go]: https://macdecloud.com/?utm_source=gh
+[b-index]: https://img.shields.io/badge/All%20docs-192b25?style=for-the-badge&logo=github&logoColor=white
+[l-index]: https://github.com/decloud-ai/.github/blob/main/DOCS.md
