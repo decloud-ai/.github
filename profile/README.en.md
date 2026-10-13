@@ -28,7 +28,7 @@ Wiring up several model vendors usually means one new key per vendor, a retest o
 - `Upstream failures are not charged` <sub>and usage is itemized and exportable</sub>
 - `Errors you can act on` <sub>one doc page per status code, in English and Chinese</sub>
 
-`Which models can I use?` <sub><a href="https://macdecloud.com/models?utm_source=gh">Open the model page</a>: each model's upstream is labeled</sub>
+`Which models can I use?` <sub><a href="https://macdecloud.com/models?utm_source=gh">Open the model page</a></sub>
 
 ---
 
