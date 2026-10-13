@@ -35,6 +35,7 @@
 ### 按需要复制代码
 
 下面的例子都用环境变量 `DECLOUD_API_KEY` —— 先设好它,再挑你要的那段。
+Python 与 Node.js 两段用的是 **OpenAI 官方 SDK**,只需要填 `base_url` 与 `api_key` 两处。
 
 **最快跑通 —— cURL**
 
@@ -55,7 +56,7 @@ curl https://macdecloud.com/v1/chat/completions \
 }' 
 ```
 
-**写代码 —— Python(OpenAI SDK)**
+**Python**
 
 ```python
 import os
@@ -72,7 +73,7 @@ r = client.chat.completions.create(
 print(r.choices[0].message.content)
 ```
 
-**写代码 —— Node.js(OpenAI SDK)**
+**Node.js**
 
 ```javascript
 import OpenAI from "openai";
