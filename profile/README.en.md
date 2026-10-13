@@ -69,7 +69,7 @@ curl https://macdecloud.com/v1/chat/completions \
 }'
 ```
 
-#### Python
+<sub>Install first (once is enough): the code below calls the API with OpenAI's official SDK, installed with pip.</sub>
 
 ```bash
 pip install openai
@@ -90,7 +90,7 @@ r = client.chat.completions.create(
 print(r.choices[0].message.content)
 ```
 
-#### Node.js
+<sub>Install first (once is enough): the code below calls the API with OpenAI's official SDK, installed with npm.</sub>
 
 ```bash
 npm install openai
