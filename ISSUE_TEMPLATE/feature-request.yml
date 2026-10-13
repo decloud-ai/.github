@@ -1,0 +1,24 @@
+name: 功能建议 / Feature request
+description: 想要的能力、你的场景、现在怎么绕
+title: "[建议] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 你的场景
+      description: 你在做什么、卡在哪一步
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 你想要的能力
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 现在怎么绕过的(可选)
+    validations:
+      required: false

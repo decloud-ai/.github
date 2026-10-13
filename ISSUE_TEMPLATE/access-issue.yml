@@ -1,0 +1,52 @@
+name: 接入问题 / Access issue
+description: 接不上、报错、返回不符合预期 —— 客户端 / 模型 ID / 状态码
+title: "[接入] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        先说清三件事,我们能快很多:**用的哪个客户端 · 模型写的是哪个完整 ID · 返回的状态码与错误原文**。
+        状态码含义先看 [报错对照](https://macdecloud.com/docs/errors)。
+        ⚠️ **不要贴 API Key**。
+  - type: input
+    id: client
+    attributes:
+      label: 客户端 / SDK
+      description: 你在用什么连(Claude Code / Cherry Studio / Python openai SDK …)
+      placeholder: 例:Cherry Studio 1.x / Python openai 1.x
+    validations:
+      required: true
+  - type: input
+    id: endpoint
+    attributes:
+      label: 接口地址
+      placeholder: 例:https://macdecloud.com/v1(Claude Code 用 https://macdecloud.com)
+    validations:
+      required: false
+  - type: input
+    id: model
+    attributes:
+      label: 模型 ID(完整,带厂商前缀)
+      placeholder: 例:deepseek/deepseek-v4-pro
+    validations:
+      required: false
+  - type: textarea
+    id: error
+    attributes:
+      label: 状态码与错误原文
+      description: 把返回的状态码和错误信息原文贴上来(中文或英文都行)
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: when
+    attributes:
+      label: 什么时候开始的
+      options:
+        - 第一次试就不通
+        - 之前能用,现在不行了
+        - 偶发
+        - 不确定
+    validations:
+      required: false
