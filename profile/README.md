@@ -71,6 +71,10 @@ curl https://macdecloud.com/v1/chat/completions \
 
 #### Python
 
+```bash
+pip install openai
+```
+
 ```python
 import os
 from openai import OpenAI
@@ -87,6 +91,10 @@ print(r.choices[0].message.content)
 ```
 
 #### Node.js
+
+```bash
+npm install openai
+```
 
 ```javascript
 import OpenAI from "openai";
@@ -131,7 +139,7 @@ export ANTHROPIC_MODEL='decloud-opus'
 claude
 ```
 
-<sub>`decloud-opus` 是别名,不是固定模型:先在控制台 API Keys → Model aliases 里建一个,映射到支持工具调用的模型;也可以把 `ANTHROPIC_MODEL` 直接写成真实模型 ID。</sub>
+<sub>`decloud-opus` 是别名,不是固定模型:没建就直接用会返回 404 `model not found or disabled`。先在控制台 API Keys → Model aliases 里建一个,映射到支持工具调用的模型;也可以把 `ANTHROPIC_MODEL` 直接写成真实模型 ID。这里要用 `ANTHROPIC_AUTH_TOKEN`(按 Bearer 发送),换成 `ANTHROPIC_API_KEY`(客户端会发 `x-api-key`)会 401。</sub>
 
 #### Codex
 
@@ -156,7 +164,7 @@ export DECLOUD_API_KEY='dcld-sk-...'
 codex
 ```
 
-<sub>`decloud-codex` 同样是别名,且只作用于这个 Key:先在控制台 API Keys → Model aliases 里建,或把 `model` 直接写成真实模型 ID。</sub>
+<sub>`decloud-codex` 同样是别名,且只作用于这个 Key:没建就直接用会返回 404。先在控制台 API Keys → Model aliases 里建,或把 `model` 直接写成真实模型 ID。</sub>
 
 更多接法(Cursor · opencode · Cherry Studio · 工具调用 · 模型名怎么写)见 [文档 · 客户端](https://macdecloud.com/docs/clients?utm_source=gh) 与 [quickstart][l-qs]。
 
