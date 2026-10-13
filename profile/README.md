@@ -1,3 +1,5 @@
+<p align="right"><b>中文</b> · <a href="https://github.com/decloud-ai/.github/blob/main/profile/README.en.md">English</a></p>
+
 <div align="center">
 
 <img src="https://github.com/decloud-ai/.github/raw/main/assets/logo.png" width="56" alt="deCloud">
@@ -31,7 +33,7 @@
 ### `02` 第一次跑通
 
 1. `连接即登录` <sub>不用注册、不用邮箱;MetaMask / OKX Wallet / TokenPocket / imToken 都能用,签名不转账、不花手续费</sub>
-2. `充值` <sub>充一次余额,按 token 用量扣</sub>
+2. `充值` <sub>充一次余额,按 token 用量扣:<a href="https://macdecloud.com/docs/billing?utm_source=gh">计费说明</a></sub>
 3. `创建 API Key` <sub>在控制台创建一把属于自己的,以 dcld-sk- 开头</sub>
 4. `填进工具` <sub>只改两处:地址和 Key</sub>
 
@@ -48,7 +50,7 @@ client = OpenAI(
 
 下面的例子用环境变量装 Key:`DECLOUD_API_KEY`(Claude Code 那段用 `ANTHROPIC_AUTH_TOKEN`)。先设好,再挑你要的那段。Python 与 Node.js 用的是 OpenAI 官方 SDK,只需要填 `base_url` 与 `api_key` 两处。
 
-#### 最快跑通 —— cURL
+#### 先用 cURL 跑通
 
 ```bash
 export DECLOUD_API_KEY='dcld-sk-...'
