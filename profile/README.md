@@ -22,7 +22,7 @@
 - `一个 Key 覆盖七类模型` <sub>不用逐家开户、逐家管 Key</sub>
 - `接入只写一次` <sub>换模型不用改代码</sub>
 - `客户端不用换` <sub>Claude Code、Codex、Cursor、Cherry Studio 能改地址就能接</sub>
-- `上游逐个标注` <sub>每个模型的来源在模型页看得见</sub>
+- `上游逐个标注` <sub>每个模型的来源在<a href="https://macdecloud.com/models">模型页</a>看得见</sub>
 - `失败不计费` <sub>上游出错导致的失败不扣余额,用量可导出</sub>
 - `报错有据可查` <sub>每个状态码一页文档,中英文都有</sub>
 
@@ -32,7 +32,7 @@
 
 1. `连接即登录` <sub>不用注册、不用邮箱;MetaMask / OKX Wallet / TokenPocket / imToken 都能用,签名不转账、不花手续费</sub>
 2. `充值` <sub>充一次余额,按 token 用量扣</sub>
-3. `创建 API Key` <sub>创建一把属于自己的,以 dcld-sk- 开头</sub>
+3. `创建 API Key` <sub>在控制台创建一把属于自己的,以 dcld-sk- 开头</sub>
 4. `填进工具` <sub>只改两处:地址和 Key</sub>
 
 ```python
@@ -46,7 +46,7 @@ client = OpenAI(
 
 ### `03` 代码示例
 
-下面的例子都用环境变量 `DECLOUD_API_KEY` —— 先设好它,再挑你要的那段。Python 与 Node.js 两段用的是 OpenAI 官方 SDK,只需要填 `base_url` 与 `api_key` 两处。
+下面的例子用环境变量装 Key:`DECLOUD_API_KEY`(Claude Code 那段用 `ANTHROPIC_AUTH_TOKEN`)。先设好,再挑你要的那段。Python 与 Node.js 用的是 OpenAI 官方 SDK,只需要填 `base_url` 与 `api_key` 两处。
 
 #### 最快跑通 —— cURL
 
@@ -129,6 +129,8 @@ export ANTHROPIC_MODEL='decloud-opus'
 claude
 ```
 
+<sub>`decloud-opus` 是别名,不是固定模型:先在控制台 API Keys → Model aliases 里建一个,映射到支持工具调用的模型;也可以把 `ANTHROPIC_MODEL` 直接写成真实模型 ID。</sub>
+
 #### Codex
 
 配置写进 `~/.codex/config.toml`:
@@ -151,6 +153,8 @@ wire_api = "responses"
 export DECLOUD_API_KEY='dcld-sk-...'
 codex
 ```
+
+<sub>`decloud-codex` 同样是别名,且只作用于这个 Key:先在控制台 API Keys → Model aliases 里建,或把 `model` 直接写成真实模型 ID。</sub>
 
 更多接法(Cursor · opencode · Cherry Studio · 工具调用 · 模型名怎么写)见 [文档 · 客户端](https://macdecloud.com/docs/clients?utm_source=gh) 与 [quickstart][l-qs]。
 
