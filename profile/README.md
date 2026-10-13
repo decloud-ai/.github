@@ -28,9 +28,11 @@
 - `失败不计费` <sub>上游出错导致的失败不扣余额,用量可导出</sub>
 - `报错有据可查` <sub>每个状态码一页文档,中英文都有</sub>
 
+`能用哪些模型` <sub><a href="https://macdecloud.com/models?utm_source=gh">打开模型页</a>:每个模型的来源逐个标注</sub>
+
 ---
 
-### `02` 第一次跑通
+### `02` 五分钟跑通
 
 1. `连接即登录` <sub>不用注册、不用邮箱;MetaMask / OKX Wallet / TokenPocket / imToken 都能用,签名不转账、不花手续费</sub>
 2. `充值` <sub>充一次余额,按 token 用量扣:<a href="https://macdecloud.com/docs/billing?utm_source=gh">计费说明</a></sub>
@@ -48,9 +50,7 @@ client = OpenAI(
 
 ### `03` 代码示例
 
-**这一节是四种写代码的接法,按需要挑一段就行 —— 它们互相独立,不是让你从头做到尾。**
-
-下面的例子用环境变量装 Key:`DECLOUD_API_KEY`(Claude Code 那段用 `ANTHROPIC_AUTH_TOKEN`)。先设好,再挑你要的那段。Python 与 Node.js 用的是 OpenAI 官方 SDK,只需要填 `base_url` 与 `api_key` 两处。
+<sub>先设好 Key:`export DECLOUD_API_KEY='dcld-sk-...'`</sub>
 
 #### `03.1` 先用 cURL 跑通
 
