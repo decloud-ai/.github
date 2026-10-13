@@ -1,9 +1,6 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/decloud-ai/.github/raw/main/assets/logo-dark.png">
-  <img src="https://github.com/decloud-ai/.github/raw/main/assets/logo-light.png" width="88" alt="deCloud">
-</picture>
+<img src="https://github.com/decloud-ai/.github/raw/main/assets/logo.png" width="40" alt="deCloud"> **deCloud**
 
 **一个 API Key 调用全球顶级 AI 模型**
 
@@ -23,17 +20,19 @@
 
 ### 能做什么
 
-- **一把 Key 接多类模型** —— 对话、图像、视频、语音、转写、嵌入、重排,不用为每家模型单独开户、单独管 Key
-- **换模型不用改代码** —— 接入只写一次,之后模型换代跟你没关系
-- **手上的客户端直接用** —— Claude Code、Codex、Cursor、Cherry Studio 这类,能改接口地址就能接
-- **报错看得懂** —— `401` `402` `403` `404` `429` 各有说明和文档,中文英文都给了
-- **失败不白花钱** —— 上游出错导致的失败不计费;用量逐笔可查,能导出表格
-- **模型来源看得见** —— 每个模型的上游在模型页逐个标注
+| 好处 | 说明 |
+|---|---|
+| 一把 Key 接多类模型 | 对话、图像、视频、语音、转写、嵌入、重排,不用为每家模型单独开户、单独管 Key |
+| 换模型不用改代码 | 接入只写一次,之后模型换代跟你没关系 |
+| 手上的客户端直接用 | Claude Code、Codex、Cursor、Cherry Studio 这类,能改接口地址就能接 |
+| 报错看得懂 | `401` `402` `403` `404` `429` 各有说明和文档,中文英文都给了 |
+| 失败不白花钱 | 上游出错导致的失败不计费;用量逐笔可查,能导出表格 |
+| 模型来源看得见 | 每个模型的上游在模型页逐个标注 |
 
 ### 第一次跑通
 
 1. 到 [macdecloud.com](https://macdecloud.com/?utm_source=gh) 注册,拿一把 `dcld-sk-…` 开头的 Key
-2. **写代码接入时只改两处** —— 地址和 Key:
+2. 写代码接入时只改两处 —— 地址和 Key:
 
 ```python
 from openai import OpenAI
@@ -44,29 +43,23 @@ client = OpenAI(
 )
 ```
 
-3. 调用一次:**返回里带 `content` 就说明通了**
+3. 调用一次:返回里带 `content` 就说明通了
 
 > 用图形客户端、Claude Code、Codex 的接法见 [quickstart][l-qs] —— 那三种填的字段不一样,别只改两处。
 
 ### 视频教程
 
-[![deCloud 接入教程](https://img.youtube.com/vi/Kh9MC5De2vI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Kh9MC5De2vI)
-
-英文 · 2 分 47 秒 —— 从注册到第一次调用,完整走一遍。
+| [![deCloud 接入教程](https://img.youtube.com/vi/Kh9MC5De2vI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Kh9MC5De2vI) |
+|---|
+| 3 分钟 —— 从注册到第一次调用,完整走一遍。 |
 
 ### 文档地图
 
-| 我要 | 去哪 |
-|---|---|
-| 接口地址、Key、协议、SDK | [接入](https://macdecloud.com/docs/access?utm_source=gh) |
-| 有哪些模型、单价多少 | [模型目录](https://macdecloud.com/models?utm_source=gh) |
-| 计费、余额、用量明细 | [计费与用量](https://macdecloud.com/docs/billing?utm_source=gh) |
-| 我的客户端怎么填 | [客户端填法](https://macdecloud.com/docs/clients?utm_source=gh) |
-| 某个报错是什么意思 | [报错对照](https://macdecloud.com/docs/errors?utm_source=gh) |
+[Integration][d-1] · [Models][d-2] · [Clients][d-3] · [Billing][d-4] · [Errors and troubleshooting][d-5]
 
 ### 关于 deCloud
 
-deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型;对外统一 OpenAI 兼容协议,另提供 Anthropic Messages 与 OpenAI Responses 两个端点,原有代码只改「地址 + Key」两处。目录同时收录直连厂商与聚合目录来源,每个模型的上游在模型页逐个标注。按 token 计费,输入输出分列;上游出错导致的失败不扣余额;可申请免费额度。文档:macdecloud.com/docs
+deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型;对外统一 OpenAI 兼容协议,另提供 Anthropic Messages 与 OpenAI Responses 两个端点,原有代码只改「地址 + Key」两处。目录同时收录直连厂商与聚合目录来源,每个模型的上游在模型页逐个标注。按 token 计费,输入输出分列;上游出错导致的失败不扣余额;可申请免费额度。
 
 ### 遇到问题
 
@@ -84,3 +77,8 @@ deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、�
 [s-1]: https://img.shields.io/badge/OpenAI-compatible-192b25?style=flat-square
 [s-2]: https://img.shields.io/badge/Anthropic-Messages-192b25?style=flat-square
 [s-3]: https://img.shields.io/badge/OpenAI-Responses-192b25?style=flat-square
+[d-1]: https://macdecloud.com/docs/access?utm_source=gh
+[d-2]: https://macdecloud.com/docs/models?utm_source=gh
+[d-3]: https://macdecloud.com/docs/clients?utm_source=gh
+[d-4]: https://macdecloud.com/docs/billing?utm_source=gh
+[d-5]: https://macdecloud.com/docs/errors?utm_source=gh
