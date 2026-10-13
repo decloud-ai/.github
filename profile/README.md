@@ -30,12 +30,10 @@
 
 ### `02` 第一次跑通
 
-<sub>连接即登录 → 充值 → 创建 API Key → 填进工具</sub>
-
-1. 连接即登录 —— 不用注册账号、不用邮箱(支持 MetaMask / OKX Wallet / TokenPocket / imToken 及浏览器钱包;签名只证明这个钱包是你的,不转账、不花手续费)
-2. 充值
-3. 创建一把属于自己的 API Key —— 以 `dcld-sk-` 开头
-4. 填进工具:只改两处 —— 地址和 Key:
+1. `连接即登录` <sub>不用注册、不用邮箱;MetaMask / OKX Wallet / TokenPocket / imToken 都能用,签名不转账、不花手续费</sub>
+2. `充值` <sub>充一次余额,按 token 用量扣</sub>
+3. `创建 API Key` <sub>创建一把属于自己的,以 dcld-sk- 开头</sub>
+4. `填进工具` <sub>只改两处:地址和 Key</sub>
 
 ```python
 client = OpenAI(
