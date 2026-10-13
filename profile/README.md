@@ -183,7 +183,7 @@ deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、�
 
 [![Get started][b-go]][l-go] [![All docs][b-index]][l-index] [![Email][b-mail]][l-mail]
 
-注册 → 拿一把 Key → 改两处地址 → 跑通第一次调用。
+连接即登录 → 创建 API Key → 填进工具 → 跑通第一次调用。
 
 <sub><a href="https://macdecloud.com/?utm_source=gh">macdecloud.com</a> · <a href="https://github.com/decloud-ai/.github/blob/main/DOCS.md">文档总目录</a></sub>
 
