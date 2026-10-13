@@ -48,7 +48,7 @@ client = OpenAI(
 
 ### `03` 代码示例
 
-**这一节是六种接法,按需要挑一段就行 —— 它们互相独立,不是让你从头做到尾。**
+**这一节是四种写代码的接法,按需要挑一段就行 —— 它们互相独立,不是让你从头做到尾。**
 
 下面的例子用环境变量装 Key:`DECLOUD_API_KEY`(Claude Code 那段用 `ANTHROPIC_AUTH_TOKEN`)。先设好,再挑你要的那段。Python 与 Node.js 用的是 OpenAI 官方 SDK,只需要填 `base_url` 与 `api_key` 两处。
 
@@ -144,7 +144,11 @@ curl https://macdecloud.com/v1/chat/completions \
 
 ---
 
-#### `03.5` Claude Code
+### `04` 客户端
+
+**两种现成客户端,按需要挑一个就行 —— 都要先在控制台建一个模型别名(见每段下面的说明)。**
+
+#### `04.1` Claude Code
 
 ```bash
 export ANTHROPIC_BASE_URL='https://macdecloud.com'
@@ -157,7 +161,7 @@ claude
 
 ---
 
-#### `03.6` Codex
+#### `04.2` Codex
 
 配置写进 `~/.codex/config.toml`:
 
@@ -186,7 +190,7 @@ codex
 
 ---
 
-### `04` 视频教程
+### `05` 视频教程
 
 | [![deCloud 接入教程](https://img.youtube.com/vi/Kh9MC5De2vI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Kh9MC5De2vI) |
 |---|
@@ -194,20 +198,20 @@ codex
 
 ---
 
-### `05` 关于 deCloud
+### `06` 关于 deCloud
 
 deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型;对外统一 OpenAI 兼容协议,另提供 Anthropic Messages 与 OpenAI Responses 两个端点,原有代码只改「地址 + Key」两处。目录同时收录直连厂商与聚合目录来源,每个模型的上游在模型页逐个标注。按 token 计费,输入输出分列;上游出错导致的失败不扣余额;可申请免费额度。
 
 ---
 
-### `06` 遇到问题
+### `07` 遇到问题
 
 - [`Telegram 客服`](https://t.me/DeCloud_CS) <sub>接入排障、用量答疑</sub>
 - [`GitHub Issue`](https://github.com/decloud-ai/quickstart/issues) <sub>报错、建议、文档问题</sub>
 
 ---
 
-### `07` 开始使用
+### `08` 开始使用
 
 <div align="center">
 
