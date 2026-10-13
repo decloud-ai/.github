@@ -135,11 +135,11 @@ curl https://macdecloud.com/v1/chat/completions \
 ```bash
 export ANTHROPIC_BASE_URL='https://macdecloud.com'
 export ANTHROPIC_AUTH_TOKEN='dcld-sk-...'
-export ANTHROPIC_MODEL='decloud-opus'
+export ANTHROPIC_MODEL='decloud-coder'
 claude
 ```
 
-<sub>`decloud-opus` 是别名,不是固定模型:没建就直接用会返回 404 `model not found or disabled`。先在控制台 API Keys → Model aliases 里建一个,映射到支持工具调用的模型;也可以把 `ANTHROPIC_MODEL` 直接写成真实模型 ID。这里要用 `ANTHROPIC_AUTH_TOKEN`(按 Bearer 发送),换成 `ANTHROPIC_API_KEY`(客户端会发 `x-api-key`)会 401。</sub>
+<sub>`decloud-coder` 是别名,不是固定模型:先在控制台 API Keys → Model aliases 里建一个,映射到支持工具调用的模型(别用 `opus`/`sonnet`/`haiku` 这类保留短名 —— 部分 CLI 版本会在本地改写它们),或直接把 `ANTHROPIC_MODEL` 写成真实模型 ID;没建就用会返回 404 `model not found or disabled`。这里要用 `ANTHROPIC_AUTH_TOKEN`(按 Bearer 发送),换成 `ANTHROPIC_API_KEY`(客户端会发 `x-api-key`)会 401。</sub>
 
 #### Codex
 
