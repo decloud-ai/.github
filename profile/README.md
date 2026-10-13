@@ -24,7 +24,7 @@
 - `一个 Key 覆盖七类模型` <sub>不用逐家开户、逐家管 Key</sub>
 - `接入只写一次` <sub>换模型不用改代码</sub>
 - `客户端不用换` <sub>Claude Code、Codex、Cursor、Cherry Studio 能改地址就能接</sub>
-- `上游逐个标注` <sub>每个模型的来源在<a href="https://macdecloud.com/models">模型页</a>看得见</sub>
+- `上游逐个标注` <sub>每个模型的来源在<a href="https://macdecloud.com/models?utm_source=gh">模型页</a>看得见</sub>
 - `失败不计费` <sub>上游出错导致的失败不扣余额,用量可导出</sub>
 - `报错有据可查` <sub>每个状态码一页文档,中英文都有</sub>
 
