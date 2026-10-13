@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         先说清三件事,我们能快很多:**用的哪个客户端 · 模型写的是哪个完整 ID · 返回的状态码与错误原文**。
-        状态码含义先看 [报错对照](https://macdecloud.com/docs/errors)。
+        状态码含义先看 [报错对照](https://macdecloud.com/docs/errors?utm_source=gh)。
         ⚠️ **不要贴 API Key**。
   - type: input
     id: client
