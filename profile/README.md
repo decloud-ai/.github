@@ -1,16 +1,13 @@
 <div align="center">
 
-<img src="https://github.com/decloud-ai/.github/raw/main/assets/logo.png" width="40" alt="deCloud"> **deCloud**
+<img src="https://github.com/decloud-ai/.github/raw/main/assets/logo.png" width="56" alt="deCloud">
 
-**一个 API Key 调用全球顶级 AI 模型**
+### deCloud
 
+**一个 API Key 调用全球顶级 AI 模型**<br>
 <sub>One API key to every frontier AI model</sub>
 
-对话 · 图像 · 视频 · 语音 · 转写 · 嵌入 · 重排 —— 七类模型,一套 OpenAI 兼容协议。
-
-<br>
-
-[![Quickstart][b-qs]][l-qs] [![Docs][b-docs]][l-docs] [![Telegram][b-tg]][l-tg]
+[![Website][b-web]][l-web] [![Quickstart][b-qs]][l-qs] [![Docs][b-docs]][l-docs] [![TG][b-tg]][l-tg]
 
 ![OpenAI compatible][s-1] ![Anthropic Messages][s-2] ![OpenAI Responses][s-3]
 
@@ -64,11 +61,13 @@ deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、�
 
 <div align="center"><sub><a href="https://macdecloud.com/?utm_source=gh">macdecloud.com</a> · <a href="https://macdecloud.com/docs?utm_source=gh">文档</a></sub></div>
 
-[b-qs]: https://img.shields.io/badge/Quickstart-30s-245e43?style=for-the-badge&logo=github
+[b-web]: https://img.shields.io/badge/Website-macdecloud.com-245e43?style=for-the-badge&logo=googlechrome
+[l-web]: https://macdecloud.com/?utm_source=gh
+[b-qs]: https://img.shields.io/badge/Quickstart-5m-245e43?style=for-the-badge&logo=github
 [l-qs]: https://github.com/decloud-ai/quickstart
-[b-docs]: https://img.shields.io/badge/Docs-macdecloud.com-245e43?style=for-the-badge
+[b-docs]: https://img.shields.io/badge/Docs-macdecloud.com%2Fdocs-245e43?style=for-the-badge&logo=readthedocs
 [l-docs]: https://macdecloud.com/docs?utm_source=gh
-[b-tg]: https://img.shields.io/badge/Telegram-Support-192b25?style=for-the-badge&logo=telegram
+[b-tg]: https://img.shields.io/badge/TG-SUPPORT-192b25?style=for-the-badge&logo=telegram
 [l-tg]: https://t.me/DeCloud_CS
 [s-1]: https://img.shields.io/badge/OpenAI-compatible-192b25?style=flat-square
 [s-2]: https://img.shields.io/badge/Anthropic-Messages-192b25?style=flat-square
