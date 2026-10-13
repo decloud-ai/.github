@@ -28,7 +28,7 @@
 - `失败不计费` <sub>上游出错导致的失败不扣余额,用量可导出</sub>
 - `报错有据可查` <sub>每个状态码一页文档,中英文都有</sub>
 
-`能用哪些模型` <sub><a href="https://macdecloud.com/models?utm_source=gh">打开模型页</a>:每个模型的来源逐个标注</sub>
+`能用哪些模型` <sub><a href="https://macdecloud.com/models?utm_source=gh">打开模型页</a></sub>
 
 ---
 
