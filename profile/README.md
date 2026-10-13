@@ -29,20 +29,114 @@
 ### 第一次跑通
 
 1. 到 [macdecloud.com](https://macdecloud.com/?utm_source=gh) 注册,拿一把 `dcld-sk-…` 开头的 Key
-2. 写代码接入时只改两处 —— 地址和 Key:
+2. **写代码接入时只改两处** —— 地址和 Key(见下一节的代码段)
+3. 调用一次:返回里带 `content` 就说明通了
+
+### 按需要复制代码
+
+下面的例子都用环境变量 `DECLOUD_API_KEY` —— 先设好它,再挑你要的那段。
+
+**最快跑通 —— cURL**
+
+```bash
+export DECLOUD_API_KEY='dcld-sk-...'
+
+curl https://macdecloud.com/v1/chat/completions \
+  -H "Authorization: Bearer $DECLOUD_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+  "model": "deepseek/deepseek-chat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello"
+    }
+  ]
+}' 
+```
+
+**写代码 —— Python(OpenAI SDK)**
 
 ```python
+import os
 from openai import OpenAI
 
 client = OpenAI(
     base_url="https://macdecloud.com/v1",
-    api_key="dcld-sk-...",
+    api_key=os.environ["DECLOUD_API_KEY"],
 )
+r = client.chat.completions.create(
+    model="deepseek/deepseek-chat",
+    messages=[{"role": "user", "content": "Hello"}],
+)
+print(r.choices[0].message.content)
 ```
 
-3. 调用一次:返回里带 `content` 就说明通了
+**写代码 —— Node.js(OpenAI SDK)**
 
-> 用图形客户端、Claude Code、Codex 的接法见 [quickstart][l-qs] —— 那三种填的字段不一样,别只改两处。
+```javascript
+import OpenAI from "openai";
+
+const client = new OpenAI({
+  baseURL: "https://macdecloud.com/v1",
+  apiKey: process.env.DECLOUD_API_KEY,
+});
+const r = await client.chat.completions.create({
+  model: "deepseek/deepseek-chat",
+  messages: [{ role: "user", content: "Hello" }],
+});
+console.log(r.choices[0].message.content);
+```
+
+**流式输出(SSE)** —— 请求体里加 `"stream": true`:
+
+```bash
+curl https://macdecloud.com/v1/chat/completions \
+  -H "Authorization: Bearer $DECLOUD_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+  "model": "deepseek/deepseek-chat",
+  "stream": true,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello"
+    }
+  ]
+}' 
+```
+
+**Claude Code**
+
+```bash
+export ANTHROPIC_BASE_URL='https://macdecloud.com'
+export ANTHROPIC_AUTH_TOKEN='dcld-sk-...'
+export ANTHROPIC_MODEL='decloud-opus'
+claude
+```
+
+**Codex** —— 配置写进 `~/.codex/config.toml`:
+
+```toml
+# ~/.codex/config.toml
+model = "decloud-codex"
+model_provider = "decloud"
+
+[model_providers.decloud]
+name = "deCloud"
+base_url = "https://macdecloud.com/v1"
+env_key = "DECLOUD_API_KEY"
+wire_api = "responses"
+```
+
+然后:
+
+```bash
+export DECLOUD_API_KEY='dcld-sk-...'
+codex
+```
+
+更多接法(Cursor · opencode · Cherry Studio · 工具调用 · 模型名怎么写)见 [文档 · 客户端](https://macdecloud.com/docs/clients?utm_source=gh) 与 [quickstart][l-qs]。
 
 ### 视频教程
 
