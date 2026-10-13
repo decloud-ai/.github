@@ -15,9 +15,9 @@
 
 ---
 
-### 为什么选择 deCloud
+### `01` 为什么选择 deCloud
 
-接入多家模型,通常绕不开这几件事:每接一家就多一把 Key、换个模型就要重测、账单散在几个后台、出错了看不出是哪一层的问题。deCloud 把这些收在中间一层里:
+> 接入多家模型,通常绕不开这几件事:每接一家就多一把 Key、换个模型就要重测、账单散在几个后台、出错了看不出是哪一层的问题。deCloud 把这些收在中间一层里:
 
 - 一个 Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型 —— 不用逐家开户、逐家管 Key
 - 接入只写一次,之后模型换代与你无关 —— 换模型不用改代码
@@ -28,7 +28,7 @@
 
 ---
 
-### 第一次跑通
+### `02` 第一次跑通
 
 1. 到 [macdecloud.com](https://macdecloud.com/?utm_source=gh) 注册,拿一把 `dcld-sk-…` 开头的 Key
 2. **自己写代码接入,只改两处** —— 地址和 Key(代码见下一节);用 Claude Code、Codex 或图形客户端,填的字段不一样
@@ -36,10 +36,9 @@
 
 ---
 
-### 代码示例
+### `03` 代码示例
 
-下面的例子都用环境变量 `DECLOUD_API_KEY` —— 先设好它,再挑你要的那段。
-Python 与 Node.js 两段用的是 **OpenAI 官方 SDK**,只需要填 `base_url` 与 `api_key` 两处。
+> <sub>下面的例子都用环境变量 `DECLOUD_API_KEY` —— 先设好它,再挑你要的那段。<br>Python 与 Node.js 两段用的是 **OpenAI 官方 SDK**,只需要填 `base_url` 与 `api_key` 两处。</sub>
 
 #### 最快跑通 —— cURL
 
@@ -149,21 +148,21 @@ codex
 
 ---
 
-### 视频教程
+### `04` 视频教程
 
 | [![deCloud 接入教程](https://img.youtube.com/vi/Kh9MC5De2vI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Kh9MC5De2vI) |
 |---|
-| 3 分钟 —— 从注册到第一次调用,完整走一遍。 |
+| <sub>3 分钟 —— 从注册到第一次调用,完整走一遍。</sub> |
 
 ---
 
-### 关于 deCloud
+### `05` 关于 deCloud
 
-deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型;对外统一 OpenAI 兼容协议,另提供 Anthropic Messages 与 OpenAI Responses 两个端点,原有代码只改「地址 + Key」两处。目录同时收录直连厂商与聚合目录来源,每个模型的上游在模型页逐个标注。按 token 计费,输入输出分列;上游出错导致的失败不扣余额;可申请免费额度。
+> deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型;对外统一 OpenAI 兼容协议,另提供 Anthropic Messages 与 OpenAI Responses 两个端点,原有代码只改「地址 + Key」两处。目录同时收录直连厂商与聚合目录来源,每个模型的上游在模型页逐个标注。按 token 计费,输入输出分列;上游出错导致的失败不扣余额;可申请免费额度。
 
 ---
 
-### 遇到问题
+### `06` 遇到问题
 
 - Telegram 客服 [t.me/DeCloud_CS](https://t.me/DeCloud_CS) —— 接入排障、用量答疑
 - 在 [quickstart 提 Issue](https://github.com/decloud-ai/quickstart/issues) —— 报错、建议、文档问题
@@ -188,7 +187,7 @@ deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、�
 
 ---
 
-### 开始使用
+### `07` 开始使用
 
 [![Get started][b-go]][l-go] [![All docs][b-index]][l-index] [![Email][b-mail]][l-mail]
 
