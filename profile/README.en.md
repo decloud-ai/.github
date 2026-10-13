@@ -48,7 +48,7 @@ client = OpenAI(
 
 ### `03` Code examples
 
-**This section holds six ways to connect — pick the one you need. They are independent, not a sequence to work through.**
+**This section holds four ways to connect in code — pick the one you need. They are independent, not a sequence.**
 
 The examples read the key from an environment variable: `DECLOUD_API_KEY` (the Claude Code one uses `ANTHROPIC_AUTH_TOKEN`). Set it once, then copy the block you need. The Python and Node.js blocks use OpenAI's official SDK and only need `base_url` and `api_key`.
 
@@ -144,7 +144,11 @@ curl https://macdecloud.com/v1/chat/completions \
 
 ---
 
-#### `03.5` Claude Code
+### `04` Clients
+
+**Two ready-made clients — pick the one you need. Both need a model alias created in the console first (see the note under each).**
+
+#### `04.1` Claude Code
 
 ```bash
 export ANTHROPIC_BASE_URL='https://macdecloud.com'
@@ -157,7 +161,7 @@ claude
 
 ---
 
-#### `03.6` Codex
+#### `04.2` Codex
 
 Write this into `~/.codex/config.toml`:
 
@@ -186,7 +190,7 @@ More setups (Cursor · opencode · Cherry Studio · tool calling · how to write
 
 ---
 
-### `04` Watch it
+### `05` Watch it
 
 | [![deCloud setup walkthrough](https://img.youtube.com/vi/Kh9MC5De2vI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Kh9MC5De2vI) |
 |---|
@@ -194,20 +198,20 @@ More setups (Cursor · opencode · Cherry Studio · tool calling · how to write
 
 ---
 
-### `05` About deCloud
+### `06` About deCloud
 
 deCloud (macdecloud.com) is an OpenAI-compatible AI gateway: one API key covers seven model classes — chat, image, video, speech, transcription, embeddings and rerank. Requests use the OpenAI schema, and Anthropic Messages and OpenAI Responses endpoints are available alongside it, so existing clients change only the base URL and key. The catalog mixes first-party vendors and aggregator sources, and each model's upstream is labeled on the model page, where per-token pricing is listed. Billing is prepaid per token, input and output priced separately; requests that fail upstream are not charged, and trial credits are available on request. Docs: macdecloud.com/docs
 
 ---
 
-### `06` Need help
+### `07` Need help
 
 - [`Telegram support`](https://t.me/DeCloud_CS) <sub>integration troubleshooting, usage questions</sub>
 - [`GitHub Issue`](https://github.com/decloud-ai/quickstart/issues) <sub>errors, suggestions, documentation problems</sub>
 
 ---
 
-### `07` Get started
+### `08` Get started
 
 <div align="center">
 
