@@ -48,9 +48,11 @@ client = OpenAI(
 
 ### `03` Code examples
 
+**This section holds six ways to connect — pick the one you need. They are independent, not a sequence to work through.**
+
 The examples read the key from an environment variable: `DECLOUD_API_KEY` (the Claude Code one uses `ANTHROPIC_AUTH_TOKEN`). Set it once, then copy the block you need. The Python and Node.js blocks use OpenAI's official SDK and only need `base_url` and `api_key`.
 
-#### cURL
+#### `03.1` cURL
 
 ```bash
 export DECLOUD_API_KEY='dcld-sk-...'
@@ -68,6 +70,10 @@ curl https://macdecloud.com/v1/chat/completions \
   ]
 }'
 ```
+
+---
+
+#### `03.2` Python
 
 <sub>Install first (once is enough): the code below calls the API with OpenAI's official SDK, installed with pip.</sub>
 
@@ -90,6 +96,10 @@ r = client.chat.completions.create(
 print(r.choices[0].message.content)
 ```
 
+---
+
+#### `03.3` Node.js
+
 <sub>Install first (once is enough): the code below calls the API with OpenAI's official SDK, installed with npm.</sub>
 
 ```bash
@@ -110,7 +120,9 @@ const r = await client.chat.completions.create({
 console.log(r.choices[0].message.content);
 ```
 
-#### Streaming (SSE)
+---
+
+#### `03.4` Streaming (SSE)
 
 Add `"stream": true` to the request body:
 
@@ -130,7 +142,9 @@ curl https://macdecloud.com/v1/chat/completions \
 }'
 ```
 
-#### Claude Code
+---
+
+#### `03.5` Claude Code
 
 ```bash
 export ANTHROPIC_BASE_URL='https://macdecloud.com'
@@ -141,7 +155,9 @@ claude
 
 <sub>`decloud-coder` is an alias, not a built-in model: create it in console → API Keys → Model aliases, mapped to a tool-capable model (avoid reserved short names such as `opus`/`sonnet`/`haiku` — some CLI versions rewrite them locally), or set `ANTHROPIC_MODEL` to a real model ID; using it before you create it returns 404 `model not found or disabled`. Use `ANTHROPIC_AUTH_TOKEN` here (sent as a Bearer token); `ANTHROPIC_API_KEY` (sent as `x-api-key`) returns 401.</sub>
 
-#### Codex
+---
+
+#### `03.6` Codex
 
 Write this into `~/.codex/config.toml`:
 
