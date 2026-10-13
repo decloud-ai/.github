@@ -69,7 +69,7 @@ curl https://macdecloud.com/v1/chat/completions \
 }' 
 ```
 
-#### Python
+<sub>先装依赖(装一次就行):下面的代码用 OpenAI 官方 SDK 发请求,Python 用 pip 装。</sub>
 
 ```bash
 pip install openai
@@ -90,7 +90,7 @@ r = client.chat.completions.create(
 print(r.choices[0].message.content)
 ```
 
-#### Node.js
+<sub>先装依赖(装一次就行):下面的代码用 OpenAI 官方 SDK 发请求,Node.js 用 npm 装。</sub>
 
 ```bash
 npm install openai
