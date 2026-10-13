@@ -144,9 +144,9 @@ curl https://macdecloud.com/v1/chat/completions \
 
 ---
 
-### `04` Clients
+### `04` Common clients
 
-**Two ready-made clients — pick the one you need. Both need a model alias created in the console first (see the note under each).**
+<sub>Both need a model alias created in the console (API Keys → Model aliases), mapped to a tool-capable model; avoid reserved short names such as `opus`/`sonnet`/`haiku`, or set the model field to a real model ID.</sub>
 
 #### `04.1` Claude Code
 
@@ -157,7 +157,7 @@ export ANTHROPIC_MODEL='decloud-coder'
 claude
 ```
 
-<sub>`decloud-coder` is an alias, not a built-in model: create it in console → API Keys → Model aliases, mapped to a tool-capable model (avoid reserved short names such as `opus`/`sonnet`/`haiku` — some CLI versions rewrite them locally), or set `ANTHROPIC_MODEL` to a real model ID; using it before you create it returns 404 `model not found or disabled`. Use `ANTHROPIC_AUTH_TOKEN` here (sent as a Bearer token); `ANTHROPIC_API_KEY` (sent as `x-api-key`) returns 401.</sub>
+<sub>Use `ANTHROPIC_AUTH_TOKEN` here (sent as a Bearer token); `ANTHROPIC_API_KEY` (sent as `x-api-key`) returns 401.</sub>
 
 ---
 
@@ -183,8 +183,6 @@ Then:
 export DECLOUD_API_KEY='dcld-sk-...'
 codex
 ```
-
-<sub>`decloud-codex` is the same kind of alias, and it is scoped to this key: using it before you create it returns 404. Create it in console → API Keys → Model aliases, or set `model` to a real model ID.</sub>
 
 More setups (Cursor · opencode · Cherry Studio · tool calling · how to write a model ID) are in the [Docs · Clients](https://macdecloud.com/docs/clients?utm_source=gh) and the [quickstart][l-qs].
 
