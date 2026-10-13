@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        计费口径先看 [文档 · 计费](https://macdecloud.com/docs/billing)。
+        计费口径先看 [文档 · 计费](https://macdecloud.com/docs/billing?utm_source=gh)。
         ⚠️ **不要贴 API Key;也不要贴带地址的后台截图** —— 需要核对账号请走 Telegram 客服。
   - type: dropdown
     id: topic
