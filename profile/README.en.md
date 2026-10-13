@@ -71,6 +71,10 @@ curl https://macdecloud.com/v1/chat/completions \
 
 #### Python
 
+```bash
+pip install openai
+```
+
 ```python
 import os
 from openai import OpenAI
@@ -87,6 +91,10 @@ print(r.choices[0].message.content)
 ```
 
 #### Node.js
+
+```bash
+npm install openai
+```
 
 ```javascript
 import OpenAI from "openai";
@@ -131,7 +139,7 @@ export ANTHROPIC_MODEL='decloud-opus'
 claude
 ```
 
-<sub>`decloud-opus` is an alias, not a built-in model: create it in console → API Keys → Model aliases, mapped to a tool-capable model — or set `ANTHROPIC_MODEL` to a real model ID.</sub>
+<sub>`decloud-opus` is an alias, not a built-in model: using it before you create it returns 404 `model not found or disabled`. Create it in console → API Keys → Model aliases, mapped to a tool-capable model — or set `ANTHROPIC_MODEL` to a real model ID. Use `ANTHROPIC_AUTH_TOKEN` here (sent as a Bearer token); `ANTHROPIC_API_KEY` (sent as `x-api-key`) returns 401.</sub>
 
 #### Codex
 
@@ -156,7 +164,7 @@ export DECLOUD_API_KEY='dcld-sk-...'
 codex
 ```
 
-<sub>`decloud-codex` is the same kind of alias, and it is scoped to this key: create it in console → API Keys → Model aliases, or set `model` to a real model ID.</sub>
+<sub>`decloud-codex` is the same kind of alias, and it is scoped to this key: using it before you create it returns 404. Create it in console → API Keys → Model aliases, or set `model` to a real model ID.</sub>
 
 More setups (Cursor · opencode · Cherry Studio · tool calling · how to write a model ID) are in the [Docs · Clients](https://macdecloud.com/docs/clients?utm_source=gh) and the [quickstart][l-qs].
 
