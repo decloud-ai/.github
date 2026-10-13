@@ -7,7 +7,7 @@
 **一个 API Key 调用全球顶级 AI 模型**<br>
 <sub>One API key to every frontier AI model</sub>
 
-[![Website][b-web]][l-web] [![Quickstart][b-qs]][l-qs] [![Docs][b-docs]][l-docs] [![TG][b-tg]][l-tg]
+[![Website][b-web]][l-web] [![Quickstart][b-qs]][l-qs] [![Docs][b-docs]][l-docs] [![YouTube][b-yt]][l-yt] [![Support][b-tg]][l-tg]
 
 ![OpenAI compatible][s-1] ![Anthropic Messages][s-2] ![OpenAI Responses][s-3]
 
@@ -61,13 +61,15 @@ deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、�
 
 <div align="center"><sub><a href="https://macdecloud.com/?utm_source=gh">macdecloud.com</a> · <a href="https://macdecloud.com/docs?utm_source=gh">文档</a></sub></div>
 
-[b-web]: https://img.shields.io/badge/Website-macdecloud.com-245e43?style=for-the-badge&logo=googlechrome
+[b-web]: https://img.shields.io/badge/Website-245e43?style=for-the-badge&logo=googlechrome
 [l-web]: https://macdecloud.com/?utm_source=gh
-[b-qs]: https://img.shields.io/badge/Quickstart-5m-245e43?style=for-the-badge&logo=github
+[b-qs]: https://img.shields.io/badge/Quickstart-245e43?style=for-the-badge&logo=github
 [l-qs]: https://github.com/decloud-ai/quickstart
-[b-docs]: https://img.shields.io/badge/Docs-macdecloud.com%2Fdocs-245e43?style=for-the-badge&logo=readthedocs
+[b-docs]: https://img.shields.io/badge/Docs-245e43?style=for-the-badge&logo=readthedocs
 [l-docs]: https://macdecloud.com/docs?utm_source=gh
-[b-tg]: https://img.shields.io/badge/TG-SUPPORT-192b25?style=for-the-badge&logo=telegram
+[b-yt]: https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube
+[l-yt]: https://www.youtube.com/@decloud-AI
+[b-tg]: https://img.shields.io/badge/Support-26A5E4?style=for-the-badge&logo=telegram
 [l-tg]: https://t.me/DeCloud_CS
 [s-1]: https://img.shields.io/badge/OpenAI-compatible-192b25?style=flat-square
 [s-2]: https://img.shields.io/badge/Anthropic-Messages-192b25?style=flat-square
