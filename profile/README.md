@@ -8,15 +8,15 @@
 ![OpenAI Responses](https://img.shields.io/badge/OpenAI-Responses-245e43?style=flat-square)
 
 [![Quickstart](https://img.shields.io/badge/Quickstart-30s-245e43?style=for-the-badge&logo=github)](https://github.com/decloud-ai/quickstart)
-[![Docs](https://img.shields.io/badge/Docs-macdecloud.com-192b25?style=for-the-badge)](https://macdecloud.com/docs)
+[![Docs](https://img.shields.io/badge/Docs-macdecloud.com-192b25?style=for-the-badge)](https://macdecloud.com/docs?utm_source=gh)
 
 ### 🚀 从这里开始
 
 | | |
 |---|---|
 | **[30 秒接入 →](https://github.com/decloud-ai/quickstart)** | 四种接法:写代码 · 图形客户端 · Claude Code · Codex |
-| **[完整文档 →](https://macdecloud.com/docs)** | 接入 · 计费 · 客户端 · [报错对照](https://macdecloud.com/docs/errors) |
-| **[官网 →](https://macdecloud.com)** | 控制台 · 模型目录与单价 |
+| **[完整文档 →](https://macdecloud.com/docs?utm_source=gh)** | 接入 · 计费 · 客户端 · [报错对照](https://macdecloud.com/docs/errors?utm_source=gh) |
+| **[官网 →](https://macdecloud.com?utm_source=gh)** | 控制台 · 模型目录与单价 |
 deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型;对外统一 OpenAI 兼容协议,另提供 Anthropic Messages 与 OpenAI Responses 两个端点,原有代码只改「地址 + Key」两处。目录同时收录直连厂商与聚合目录来源,每个模型的上游在模型页逐个标注。按 token 计费,输入输出分列;上游出错导致的失败不扣余额;可申请免费额度。文档:macdecloud.com/docs
 
 ### 它解决的四件事
@@ -39,6 +39,6 @@ NextChat · Chatbox · LobeChat · Open WebUI · Cherry Studio · Cursor · open
 |---|---|
 | 💬 **Telegram 客服** | **https://t.me/DeCloud_CS** |
 | 🐛 **提问 / 报错** | [提 Issue](https://github.com/decloud-ai/quickstart/issues) |
-| 📖 **报错对照** | [macdecloud.com/docs/errors](https://macdecloud.com/docs/errors) |
+| 📖 **报错对照** | [macdecloud.com/docs/errors](https://macdecloud.com/docs/errors?utm_source=gh) |
 
 > 提问时说清三件事最快:**用的哪个客户端 · 模型写的是哪个完整 ID · 返回的状态码与错误原文**。
