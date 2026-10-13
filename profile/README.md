@@ -30,9 +30,17 @@
 
 ### `02` 第一次跑通
 
-1. 到 macdecloud.com 注册,拿一把 dcld-sk- 开头的 Key
-2. 改两处:地址和 Key(代码见 03)
-3. 调用一次:返回里带 content 就说明通了
+1. **连接即登录** —— 不用注册账号、不用邮箱(支持 MetaMask / OKX Wallet / TokenPocket / imToken 及浏览器钱包;签名只证明这个钱包是你的,不转账、不花手续费)
+2. **充值**
+3. **创建一把属于自己的 API Key** —— 以 `dcld-sk-` 开头
+4. **填进工具:只改两处** —— 地址和 Key:
+
+```python
+client = OpenAI(
+    base_url="https://macdecloud.com/v1",   # 地址
+    api_key="dcld-sk-...",                  # Key
+)
+```
 
 ---
 
