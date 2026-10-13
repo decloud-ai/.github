@@ -19,21 +19,23 @@
 
 接入多家模型,通常绕不开这几件事:每接一家就多一把 Key、换个模型就要重测、账单散在几个后台、出错了看不出是哪一层的问题。deCloud 把这些收在中间一层里:
 
-- 🟢 一个 Key 覆盖七类模型:不用逐家开户、逐家管 Key
-- 🟢 接入只写一次:换模型不用改代码
-- 🟢 客户端不用换:Claude Code、Codex、Cursor、Cherry Studio 能改地址就能接
-- 🟢 上游逐个标注:每个模型的来源在模型页看得见
-- 🟢 失败不计费:上游出错导致的失败不扣余额,用量可导出
-- 🟢 报错有据可查:每个状态码一页文档,中英文都有
+- 一个 Key 覆盖七类模型:不用逐家开户、逐家管 Key
+- 接入只写一次:换模型不用改代码
+- 客户端不用换:Claude Code、Codex、Cursor、Cherry Studio 能改地址就能接
+- 上游逐个标注:每个模型的来源在模型页看得见
+- 失败不计费:上游出错导致的失败不扣余额,用量可导出
+- 报错有据可查:每个状态码一页文档,中英文都有
 
 ---
 
 ### `02` 第一次跑通
 
-1. **连接即登录** —— 不用注册账号、不用邮箱(支持 MetaMask / OKX Wallet / TokenPocket / imToken 及浏览器钱包;签名只证明这个钱包是你的,不转账、不花手续费)
-2. **充值**
-3. **创建一把属于自己的 API Key** —— 以 `dcld-sk-` 开头
-4. **填进工具:只改两处** —— 地址和 Key:
+连接即登录 → 充值 → 创建 API Key → 填进工具
+
+1. 连接即登录 —— 不用注册账号、不用邮箱(支持 MetaMask / OKX Wallet / TokenPocket / imToken 及浏览器钱包;签名只证明这个钱包是你的,不转账、不花手续费)
+2. 充值
+3. 创建一把属于自己的 API Key —— 以 `dcld-sk-` 开头
+4. 填进工具:只改两处 —— 地址和 Key:
 
 ```python
 client = OpenAI(
@@ -172,8 +174,8 @@ deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、�
 
 ### `06` 遇到问题
 
-- 🟢 Telegram 客服 [t.me/DeCloud_CS](https://t.me/DeCloud_CS):接入排障、用量答疑
-- 🟢 [在 quickstart 提 Issue](https://github.com/decloud-ai/quickstart/issues):报错、建议、文档问题
+- Telegram 客服 [t.me/DeCloud_CS](https://t.me/DeCloud_CS):接入排障、用量答疑
+- [在 quickstart 提 Issue](https://github.com/decloud-ai/quickstart/issues):报错、建议、文档问题
 
 ---
 
