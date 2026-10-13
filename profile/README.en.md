@@ -135,11 +135,11 @@ curl https://macdecloud.com/v1/chat/completions \
 ```bash
 export ANTHROPIC_BASE_URL='https://macdecloud.com'
 export ANTHROPIC_AUTH_TOKEN='dcld-sk-...'
-export ANTHROPIC_MODEL='decloud-opus'
+export ANTHROPIC_MODEL='decloud-coder'
 claude
 ```
 
-<sub>`decloud-opus` is an alias, not a built-in model: using it before you create it returns 404 `model not found or disabled`. Create it in console → API Keys → Model aliases, mapped to a tool-capable model — or set `ANTHROPIC_MODEL` to a real model ID. Use `ANTHROPIC_AUTH_TOKEN` here (sent as a Bearer token); `ANTHROPIC_API_KEY` (sent as `x-api-key`) returns 401.</sub>
+<sub>`decloud-coder` is an alias, not a built-in model: create it in console → API Keys → Model aliases, mapped to a tool-capable model (avoid reserved short names such as `opus`/`sonnet`/`haiku` — some CLI versions rewrite them locally), or set `ANTHROPIC_MODEL` to a real model ID; using it before you create it returns 404 `model not found or disabled`. Use `ANTHROPIC_AUTH_TOKEN` here (sent as a Bearer token); `ANTHROPIC_API_KEY` (sent as `x-api-key`) returns 401.</sub>
 
 #### Codex
 
