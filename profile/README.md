@@ -2,7 +2,7 @@
 
 <img src="https://github.com/decloud-ai/.github/raw/main/assets/logo.png" width="56" alt="deCloud">
 
-### deCloud
+## deCloud
 
 **一个 API Key 调用全球顶级 AI 模型**<br>
 <sub>One API key to every frontier AI model</sub>
@@ -26,18 +26,22 @@
 - 上游出错导致的失败不计费;用量逐笔可查,能导出表格
 - 报错有中英文说明,`401` `402` `403` `404` `429` 都配了文档
 
+---
+
 ### 第一次跑通
 
 1. 到 [macdecloud.com](https://macdecloud.com/?utm_source=gh) 注册,拿一把 `dcld-sk-…` 开头的 Key
 2. **自己写代码接入,只改两处** —— 地址和 Key(代码见下一节);用 Claude Code、Codex 或图形客户端,填的字段不一样
 3. 调用一次:返回里带 `content` 就说明通了
 
-### 按需要复制代码
+---
+
+### 代码示例
 
 下面的例子都用环境变量 `DECLOUD_API_KEY` —— 先设好它,再挑你要的那段。
 Python 与 Node.js 两段用的是 **OpenAI 官方 SDK**,只需要填 `base_url` 与 `api_key` 两处。
 
-**最快跑通 —— cURL**
+#### 最快跑通 —— cURL
 
 ```bash
 export DECLOUD_API_KEY='dcld-sk-...'
@@ -56,7 +60,7 @@ curl https://macdecloud.com/v1/chat/completions \
 }' 
 ```
 
-**Python**
+#### Python
 
 ```python
 import os
@@ -73,7 +77,7 @@ r = client.chat.completions.create(
 print(r.choices[0].message.content)
 ```
 
-**Node.js**
+#### Node.js
 
 ```javascript
 import OpenAI from "openai";
@@ -89,7 +93,9 @@ const r = await client.chat.completions.create({
 console.log(r.choices[0].message.content);
 ```
 
-**流式输出(SSE)** —— 请求体里加 `"stream": true`:
+#### 流式输出(SSE)
+
+请求体里加 `"stream": true`:
 
 ```bash
 curl https://macdecloud.com/v1/chat/completions \
@@ -107,7 +113,7 @@ curl https://macdecloud.com/v1/chat/completions \
 }' 
 ```
 
-**Claude Code**
+#### Claude Code
 
 ```bash
 export ANTHROPIC_BASE_URL='https://macdecloud.com'
@@ -116,7 +122,9 @@ export ANTHROPIC_MODEL='decloud-opus'
 claude
 ```
 
-**Codex** —— 配置写进 `~/.codex/config.toml`:
+#### Codex
+
+配置写进 `~/.codex/config.toml`:
 
 ```toml
 # ~/.codex/config.toml
@@ -139,15 +147,21 @@ codex
 
 更多接法(Cursor · opencode · Cherry Studio · 工具调用 · 模型名怎么写)见 [文档 · 客户端](https://macdecloud.com/docs/clients?utm_source=gh) 与 [quickstart][l-qs]。
 
+---
+
 ### 视频教程
 
 | [![deCloud 接入教程](https://img.youtube.com/vi/Kh9MC5De2vI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Kh9MC5De2vI) |
 |---|
 | 3 分钟 —— 从注册到第一次调用,完整走一遍。 |
 
+---
+
 ### 关于 deCloud
 
 deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型;对外统一 OpenAI 兼容协议,另提供 Anthropic Messages 与 OpenAI Responses 两个端点,原有代码只改「地址 + Key」两处。目录同时收录直连厂商与聚合目录来源,每个模型的上游在模型页逐个标注。按 token 计费,输入输出分列;上游出错导致的失败不扣余额;可申请免费额度。
+
+---
 
 ### 遇到问题
 
@@ -171,6 +185,8 @@ deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、�
 [s-1]: https://img.shields.io/badge/OpenAI-compatible-192b25?style=flat-square
 [s-2]: https://img.shields.io/badge/Anthropic-Messages-192b25?style=flat-square
 [s-3]: https://img.shields.io/badge/OpenAI-Responses-192b25?style=flat-square
+
+---
 
 ### 开始使用
 
