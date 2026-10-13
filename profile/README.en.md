@@ -28,9 +28,11 @@ Wiring up several model vendors usually means one new key per vendor, a retest o
 - `Upstream failures are not charged` <sub>and usage is itemized and exportable</sub>
 - `Errors you can act on` <sub>one doc page per status code, in English and Chinese</sub>
 
+`Which models can I use?` <sub><a href="https://macdecloud.com/models?utm_source=gh">Open the model page</a>: each model's upstream is labeled</sub>
+
 ---
 
-### `02` First run
+### `02` 5-minute quickstart
 
 1. `Connect to sign in` <sub>no account, no email; MetaMask / OKX Wallet / TokenPocket / imToken and browser wallets all work, and signing never moves funds or costs gas</sub>
 2. `Top up` <sub>one balance, charged by token usage:<a href="https://macdecloud.com/docs/billing?utm_source=gh">how billing works</a></sub>
@@ -48,9 +50,7 @@ client = OpenAI(
 
 ### `03` Code examples
 
-**This section holds four ways to connect in code — pick the one you need. They are independent, not a sequence.**
-
-The examples read the key from an environment variable: `DECLOUD_API_KEY` (the Claude Code one uses `ANTHROPIC_AUTH_TOKEN`). Set it once, then copy the block you need. The Python and Node.js blocks use OpenAI's official SDK and only need `base_url` and `api_key`.
+<sub>Set your key first: `export DECLOUD_API_KEY='dcld-sk-...'`</sub>
 
 #### `03.1` cURL
 
