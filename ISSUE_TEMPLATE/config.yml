@@ -1,7 +1,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: 📖 报错对照(401 / 402 / 403 / 404 / 429 / 502 / 504)
-    url: https://macdecloud.com/docs/errors
+    url: https://macdecloud.com/docs/errors?utm_source=gh?utm_source=gh
     about: 先看状态码含义与先查哪一层 —— 多数问题这里就有答案
   - name: 💬 Telegram 客服(接入排障 / 用量答疑)
     url: https://t.me/DeCloud_CS
