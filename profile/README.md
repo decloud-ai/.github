@@ -3,11 +3,6 @@
 **一个 API Key 调用全球顶级 AI 模型**
 *One API key to every frontier AI model*
 
-deCloud 是一个 AI 模型接入层:一个 API Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型;
-对外统一 OpenAI 兼容协议,另提供 Anthropic Messages 与 OpenAI Responses 两个端点,
-原有代码只改「地址 + Key」两处。目录同时收录直连厂商与聚合目录来源,每个模型的上游在模型页逐个标注。
-按 token 计费,失败不计费。
-
 ![OpenAI compatible](https://img.shields.io/badge/OpenAI-compatible-245e43?style=flat-square)
 ![Anthropic Messages](https://img.shields.io/badge/Anthropic-Messages-245e43?style=flat-square)
 ![OpenAI Responses](https://img.shields.io/badge/OpenAI-Responses-245e43?style=flat-square)
@@ -22,6 +17,11 @@ deCloud 是一个 AI 模型接入层:一个 API Key 覆盖对话、图像、视�
 | **[30 秒接入 →](https://github.com/decloud-ai/quickstart)** | 四种接法:写代码 · 图形客户端 · Claude Code · Codex |
 | **[完整文档 →](https://macdecloud.com/docs)** | 接入 · 计费 · 客户端 · [报错对照](https://macdecloud.com/docs/errors) |
 | **[官网 →](https://macdecloud.com)** | 控制台 · 模型目录与单价 |
+
+deCloud 是一个 AI 模型接入层:一个 API Key 覆盖对话、图像、视频、语音、转写、嵌入、重排七类模型;
+对外统一 OpenAI 兼容协议,另提供 Anthropic Messages 与 OpenAI Responses 两个端点,
+原有代码只改「地址 + Key」两处。目录同时收录直连厂商与聚合目录来源,每个模型的上游在模型页逐个标注。
+按 token 计费,失败不计费。
 
 ### 它解决的四件事
 
