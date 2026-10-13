@@ -172,8 +172,8 @@ deCloud 是一个 AI 模型接入层。一个 API Key 覆盖对话、图像、�
 
 ### `06` 遇到问题
 
-- `Telegram 客服` <sub>接入排障、用量答疑:<a href="https://t.me/DeCloud_CS">t.me/DeCloud_CS</a></sub>
-- `GitHub Issue` <sub>报错、建议、文档问题:<a href="https://github.com/decloud-ai/quickstart/issues">提 Issue</a></sub>
+- [`Telegram 客服`](https://t.me/DeCloud_CS) <sub>接入排障、用量答疑</sub>
+- [`GitHub Issue`](https://github.com/decloud-ai/quickstart/issues) <sub>报错、建议、文档问题</sub>
 
 ---
 
